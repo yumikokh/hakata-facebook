@@ -1,12 +1,15 @@
 function setWhatsup() {
   const whatsupArea = document.querySelector('[name="xhpc_message"]');
+  if (!whatsupArea) return false;
   const whatsupName = whatsupArea.getAttribute('placeholder').split('―')[0];
   const whatsupText = ['今なんしようと？', 'どげんしたと？', 'とっとーと？'];
   whatsupArea.setAttribute('placeholder', `${whatsupName} ― ${whatsupText[Math.round(Math.random())]}`);
 }
 
 function setMore() {
-  document.querySelector('._1k0o ._y-c').textContent = 'もっと見るばってん';
+  const moreArea = document.querySelector('._1k0o ._y-c');
+  if (!moreArea) return;
+  moreArea.textContent = 'もっと見るばってん';
 }
 
 function setReaction() {
